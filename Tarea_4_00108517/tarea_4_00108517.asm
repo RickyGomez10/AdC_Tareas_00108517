@@ -70,13 +70,18 @@ w_strng2:
 sumar: xor ax, ax
         xor bl, bl
         mov bl, 5d 
-        
+        sub [303h], word 30h
+		sub [304h], word 30h
+		sub [305h],	word 30h
+		sub [306h], word 30h
+		sub [307h], word 30h
 
-        add ax, 0
-        add ax, 8
-        add ax, 5
-        add ax, 1
-        add ax, 7
+        add ax, [303h]
+        add ax, [304h]
+        add ax, [305h]
+        add ax, [306h]
+        add ax, [307h]
+		xor ah, ah
         div bl
         mov [30Eh], al
         add [30Eh], word 30h
